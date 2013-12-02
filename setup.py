@@ -1,10 +1,13 @@
 from setuptools import setup
+from future import unicode_literals
 
-setup(name='YourAppName',
-      version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
+requirements = [item for item in open('requirements.txt').read().splitlines()]
+
+setup(name='GWS',
+      version='.1',
+      description='GWS',
+      author='Eddie Welker',
+      author_email='user@hoost.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['Django=1.6'],
+      requirements = requirements,
      )
